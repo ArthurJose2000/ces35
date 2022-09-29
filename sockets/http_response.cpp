@@ -3,11 +3,12 @@
 
 using namespace std;
 
-HTTPResponse::HTTPResponse(char *request){
+HTTPResponse::HTTPResponse(char *request, string root_directory){
 
     string str_request(request);
 
     HTTPResponse::request = str_request;
+    HTTPResponse::root_directory = root_directory;
 
 }
 
@@ -27,7 +28,7 @@ string HTTPResponse::sendResponse(){
     HTTPResponse::file = file;
     HTTPResponse::file_type = tokenize(file, ".")[1];
 
-    ifstream f("/tmp" + file);
+    ifstream f(HTTPResponse::root_directory  + file);
 
     string content;
     string aux;

@@ -102,8 +102,6 @@ void HTTPRequest::readResponse(char *response){
 
     string status = tokenize(strs[0], " ")[1];
 
-    std::cout << status << "status \n";
-
     if(status == "200"){
 
         std::cout << "200 OK\n";

@@ -14,7 +14,7 @@ using namespace std;
 class HTTPResponse {
 
     public:
-        HTTPResponse(char *request);
+        HTTPResponse(char *request, string root_directory);
 
         string sendResponse(); // será convetida em um vetor de bytes posteriormente
 
@@ -41,6 +41,8 @@ class HTTPResponse {
         string file_type;
 
         string content;
+
+        string root_directory;
 
 };
 

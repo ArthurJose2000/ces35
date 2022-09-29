@@ -26,6 +26,8 @@ int main(int argc, char *argv[]) {
   // server port
   int port = atoi(argv[1]);
 
+  string root_directory(argv[2]);
+
   // cria um socket para IPv4 e usando protocolo de transporte TCP
   int sockfd = socket(AF_INET, SOCK_STREAM, 0);
 
@@ -102,7 +104,7 @@ int main(int argc, char *argv[]) {
 
     //thread(readRequests, &buf, &clientSockfd).detach();
 
-    HTTPResponse response(buf);
+    HTTPResponse response(buf, root_directory);
     string str_response = response.sendResponse();
 
     // Imprime o valor recebido no servidor antes de reenviar
@@ -135,7 +137,7 @@ void readRequests(char *buf, int *clientSockfd){
 
     std::stringstream ss;
 
-    HTTPResponse response(buf);
+    HTTPResponse response(buf, "/temp");
     string str_response = response.sendResponse();
 
     // Imprime o valor recebido no servidor antes de reenviar
