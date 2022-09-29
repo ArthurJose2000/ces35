@@ -46,10 +46,10 @@ string HTTPResponse::sendResponse(){
         return prepareResponse("404 Not Found", "", "");
 
 
-    std::cout << "directory: " << HTTPResponse::file << "\n";
-    std::cout << "file: " << HTTPResponse::file << "\n";
-    std::cout << "file type: " << HTTPResponse::file_type << "\n";
-    std::cout << "content: " << HTTPResponse::content << "\n";
+    // std::cout << "directory: " << HTTPResponse::file << "\n";
+    // std::cout << "file: " << HTTPResponse::file << "\n";
+    // std::cout << "file type: " << HTTPResponse::file_type << "\n";
+    // std::cout << "content: " << HTTPResponse::content << "\n";
 
     return prepareResponse("200 OK", HTTPResponse::content, HTTPResponse::file_type);
 }
