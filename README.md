@@ -1,12 +1,12 @@
-# ces35
-Laboratórios de CES-35  - Prof. Cesar Marcondes - COMP-23
+# CES-35
+# Laboratórios de CES-35  - Prof. Cesar Marcondes - COMP-23
 
 ## Lanoratório de Sockets
 Para gerar os executáveis, entre na pasta sockets e digite:
 
 ### `make`
 
-Para rodar o servidor e servir os arquivos presentes no diretório /temp/, digite:
+Para rodar o servidor em uma porta em específico e servir os arquivos do diretório desejado, digite como no exemplo abaixo:
 
 ### `./echo-server 3000 /temp`
 
