@@ -1,7 +1,7 @@
 # CES-35
 # Laboratórios de CES-35  - Prof. Cesar Marcondes - COMP-23
 
-## Lanoratório de Sockets
+## Laboratório de Sockets
 Para gerar os executáveis, entre na pasta sockets e digite:
 
 ### `make`
